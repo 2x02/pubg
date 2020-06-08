@@ -50,7 +50,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"  ></span> Admin</a>
+            <a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>
+              Admin</a>
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog modal-sm">
@@ -167,25 +168,79 @@
             <tr class="table-light">
               <th scope="row">5/06/20 6PM</th>
               <td><span class="badge" style="background-color: green;">5/100</span></td>
-              <td><button type="button" class="btn btn-success">Register</button></td>
+              <td><button type="button" class="btn btn-success" data-toggle="modal"
+                  data-target="#newReg">Register</button></td>
+              <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
             </tr>
             <tr class="table-light">
               <th scope="row">7/06/20 6PM</th>
               <td><span class="badge" style="background-color: orange;">65/100</span></td>
-              <td><button type="button" class="btn btn-success">Register</button></td>
+              <td><button type="button" class="btn btn-success" data-toggle="modal"
+                  data-target="#newReg">Register</button></td>
             </tr>
             <tr class="table-light">
               <th scope="row">8/06/20 7PM</th>
               <td><span class="badge" style="background-color: red;">95/100</span></td>
-              <td><button type="button" class="btn btn-success">Free join</button></td>
+              <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#newReg">Free
+                  join</button></td>
             </tr>
             <tr class="table-light">
               <th scope="row">7/06/20 6PM</th>
               <td><span class="badge" style="background-color: red;">100/100</span></td>
-              <td><button type="button" class="btn btn-success">Room full</button></td>
+              <td><button type="button" class="btn btn-success" data-toggle="tooltip" title="Registration Full!">Room full</button></td>
             </tr>
           </tbody>
         </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="newReg" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Register</h4>
+              </div>
+              <div class="modal-body">
+                <!-- <p>Some text in the modal.</p> -->
+                <form action="#">
+                  <div class="form-group">
+                    <label for="email">Name:</label>
+                    <input type="name" class="form-control" id="Rname">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Email:</label>
+                    <input type="email" class="form-control" id="Remail">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Mobile Number:</label>
+                    <input type="number" class="form-control" id="mnumber">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">PUBG Id:</label>
+                    <input type="text" class="form-control" id="pubgID">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Group Name:</label>
+                    <input type="text" class="form-control" id="Rgname">
+                  </div>
+                  <button type="submit" class="btn btn-success">Register</button>
+                </form> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--modal end-->
+
+
+        <!--registration full modal-->
+
+
       </div>
       <div class="col-sm-6">
         <div>
@@ -268,6 +323,11 @@
   <!-- // -->
   <!-- ./Footer -->
 
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
 
 
 </body>
